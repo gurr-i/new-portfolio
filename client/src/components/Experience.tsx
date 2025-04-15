@@ -2,6 +2,7 @@ import Timeline, { TimelineItem } from './Timeline';
 import { FiArrowRight } from 'react-icons/fi';
 import ScrollAnimation from './ScrollAnimation';
 import { FloatingSquare, FloatingCircle, FloatingDiamond } from './DecorativeElements';
+import { BASE_URL } from '../lib/constants';
 
 const experienceItems: TimelineItem[] = [
   {
@@ -72,7 +73,7 @@ const Experience = () => {
               <span className="text-primary theme-transition">#</span>experience
             </h2>
             <a 
-              href="/assets/cv.pdf" 
+              href='../new-portfolio/assets/cv.pdf'
               download="resume.pdf"
               className="text-sm text-gray-300 hover:text-white flex items-center theme-transition"
             >

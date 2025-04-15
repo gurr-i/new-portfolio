@@ -6,6 +6,7 @@ import {
   FloatingDiamond,
   GlowingElement,
 } from "./DecorativeElements";
+import heroImage from '../assets/hero-image.jpg';
 
 const Hero = () => {
   return (
@@ -105,7 +106,7 @@ const Hero = () => {
                   <p className="text-sm text-gray-300 theme-transition">
                     Currently working on{" "}
                     <span className="font-medium text-white theme-transition">
-                      Portfolio
+                    QuizNexus Project
                     </span>
                   </p>
                 </div>
@@ -120,7 +121,7 @@ const Hero = () => {
           >
             <div className="relative animate-float">
               <img
-                src="/src/assets/hero-image.jpg"
+                src={heroImage}
                 alt="Gurveer - Web Designer and Front-end Developer"
                 className="rounded-lg w-full max-w-md mx-auto object-cover theme-transition"
                 style={{ aspectRatio: "1/1" }}

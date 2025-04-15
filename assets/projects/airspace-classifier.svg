@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E0854;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A0B2E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#neonGradient)" />
+
+  <!-- Neural Network Grid -->
+  <g transform="translate(100, 100)" stroke="#00ff88" stroke-width="2">
+    <!-- Input Layer Nodes -->
+    <circle cx="100" cy="100" r="20" fill="none" stroke="#00ff88" />
+    <circle cx="100" cy="200" r="20" fill="none" stroke="#00ff88" />
+    <circle cx="100" cy="300" r="20" fill="none" stroke="#00ff88" />
+
+    <!-- Hidden Layer Nodes -->
+    <circle cx="300" cy="150" r="20" fill="none" stroke="#00ff88" />
+    <circle cx="300" cy="250" r="20" fill="none" stroke="#00ff88" />
+
+    <!-- Output Layer Node -->
+    <circle cx="500" cy="200" r="20" fill="none" stroke="#00ff88" />
+
+    <!-- Connections -->
+    <g stroke-opacity="0.6">
+      <!-- Input to Hidden -->
+      <line x1="120" y1="100" x2="280" y2="150" />
+      <line x1="120" y1="100" x2="280" y2="250" />
+      <line x1="120" y1="200" x2="280" y2="150" />
+      <line x1="120" y1="200" x2="280" y2="250" />
+      <line x1="120" y1="300" x2="280" y2="150" />
+      <line x1="120" y1="300" x2="280" y2="250" />
+
+      <!-- Hidden to Output -->
+      <line x1="320" y1="150" x2="480" y2="200" />
+      <line x1="320" y1="250" x2="480" y2="200" />
+    </g>
+  </g>
+
+  <!-- Image Classification Elements -->
+  <g transform="translate(150, 150)">
+    <!-- Binary Classification Symbols -->
+    <path d="M50 250 L90 250 L70 290 Z" fill="none" stroke="#ff00ff" stroke-width="2" />
+    <path d="M450 250 L490 250 L470 290 Z" fill="none" stroke="#ff00ff" stroke-width="2" />
+  </g>
+
+  <!-- Glowing Effects -->
+  <g filter="url(#glow)">
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+        <feMerge>
+          <feMergeNode in="coloredBlur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+  </g>
+
+  <!-- Animated Pulse Effect -->
+  <style>
+    @keyframes pulse {
+      0% { stroke-opacity: 0.6; }
+      50% { stroke-opacity: 1; }
+      100% { stroke-opacity: 0.6; }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+  </style>
+</svg>

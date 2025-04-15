@@ -6,11 +6,11 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     title: 'Languages',
-    skills: ['TypeScript', 'Lua', 'Python', 'JavaScript', 'Go', 'Rust', 'Java', 'C++', 'PHP']
+    skills: ['TypeScript', 'Python', 'JavaScript', 'C++', 'PHP', 'Dart', 'Shell']
   },
   {
     title: 'Databases',
-    skills: ['SQLite', 'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Prisma', 'Drizzle', 'Supabase']
+    skills: ['SQLite3', 'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Prisma', 'Drizzle', 'Supabase']
   },
   {
     title: 'Tools',
@@ -18,7 +18,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Frameworks',
-    skills: ['React', 'Vue', 'Flask', 'Express.js', 'Next.js', 'Nuxt', 'Svelte', 'Angular', 'Django', 'NestJS', 'Spring Boot']
+    skills: ['React', 'Vue', 'Flask', 'Express.js', 'Next.js', 'Django', 'NestJS', 'Spring Boot', 'bun']
   },
   {
     title: 'Other',

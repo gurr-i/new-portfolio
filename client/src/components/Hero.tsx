@@ -6,7 +6,7 @@ import {
   FloatingDiamond,
   GlowingElement,
 } from "./DecorativeElements";
-import heroImage from '../assets/hero-image.jpg';
+import heroImage from "../assets/hero-image.jpg";
 
 const Hero = () => {
   return (
@@ -86,7 +86,7 @@ const Hero = () => {
             <ScrollAnimation delay={400} type="fade-up">
               <a
                 href="#contacts"
-                className="inline-flex items-center px-6 py-3 border border-primary text-primary hover:bg-primary hover:bg-opacity-10 transition-colors duration-300 rounded theme-transition"
+                className="inline-flex items-center px-6 py-3 border border-primary text-primary hover:bg-dark hover:bg-opacity-10 transition-colors duration-300 rounded theme-transition"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -106,7 +106,7 @@ const Hero = () => {
                   <p className="text-sm text-gray-300 theme-transition">
                     Currently working on{" "}
                     <span className="font-medium text-white theme-transition">
-                    QuizNexus Project
+                      QuizNexus Project
                     </span>
                   </p>
                 </div>

@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "execMap": {
+      "type": "object",
+      "properties": {
+        "ts": "tsx"
+      }
+    }
+  },
+  "required": [
+    "execMap"
+  ]
+}

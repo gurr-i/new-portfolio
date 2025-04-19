@@ -2,6 +2,8 @@ import Timeline, { TimelineItem } from './Timeline';
 import { FiArrowRight } from 'react-icons/fi';
 import ScrollAnimation from './ScrollAnimation';
 import { FloatingSquare, FloatingCircle, FloatingDiamond } from './DecorativeElements';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { parallaxVariants, revealVariants } from '../lib/animations';
 import { BASE_URL } from '../lib/constants';
 
 const experienceItems: TimelineItem[] = [
@@ -40,6 +42,9 @@ const experienceItems: TimelineItem[] = [
 ];
 
 const Experience = () => {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
   return (
     <section id="experience" className="py-20 relative theme-transition">
       <div className="absolute inset-0 dot-pattern opacity-10"></div>
@@ -66,8 +71,16 @@ const Experience = () => {
         style={{ bottom: '10%', right: '10%', opacity: 0.4, animationDelay: '0.7s' }}
       />
       
-      <div className="container mx-auto px-4 md:px-8 lg:px-16">
-        <ScrollAnimation type="fade-up">
+      <motion.div 
+        className="container mx-auto px-4 md:px-8 lg:px-16"
+        style={{ y }}
+      >
+        <motion.div
+          variants={revealVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <div className="flex justify-between items-end mb-12">
             <h2 className="text-3xl font-semibold theme-transition">
               <span className="text-primary theme-transition">#</span>experience
@@ -83,12 +96,12 @@ const Experience = () => {
           </div>
           
           <p className="text-gray-400 mb-12 theme-transition">My professional journey</p>
-        </ScrollAnimation>
+        </motion.div>
         
-        <div className="mt-6">
+        <motion.div className="mt-6">
           <Timeline items={experienceItems} />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
